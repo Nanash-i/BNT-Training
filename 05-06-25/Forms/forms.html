@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="forms.js"></script>
+    <div id="forms">
+        <h1>Job Application</h1>
+        <form  >
+            <h2>Personal Info</h2>
+            <label for="FirstName">First Name:</label>
+            <input type="text" id="FirstName" name="FirstName" required placeholder="Enter your First Name" autocomplete="given-name" autofocus>
+            <br><br>
+
+            <label for="LastName">Last Name:</label>
+            <input type="text" id="LastName" name="LastName" required placeholder="Enter your Last Name" autocomplete="family-name">
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your Email" autocomplete="email">
+            <br><br>
+
+            <label for="phone">Phone Number:</label>
+           <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}"  placeholder="Enter your phone number" autocomplete="tel">
+<br><br><hr>
+
+            <h2>Education</h2>
+              <details>
+                <summary>SSLC</summary><br>
+                       <label for="SchoolName">Name of Institute:</label>
+                       <input type="text" name="SchoolName" id="SchoolName" required ><br><br>
+                       <label for="10thMark">Score:</label>
+                       <input type="text" name="10thMark" id="10thMark" required><br><br>
+                        <label for="GraduationYear">Graduation:</label>
+                        <input type="date" name="SSLCGraduationYear" id="GraduationYear" max="2025-06-05"  required><br><br>
+                        <label for="SSLCTranscript">Transcript:</label>
+                        <input type="file" name="SSLCTranscript" id="SSLCTranscript" required>
+              </details><br>
+              <details>
+                <summary>HSC</summary><br>
+                       <label for="SchoolName">Name of Institute:</label>
+                       <input type="text" name="SchoolName" id="SchoolName" required><br><br>
+                       <label for="12thMark">Score:</label>
+                       <input type="text" name="12thMark" id="12thMark" required><br><br>
+                        <label for="GraduationYear">Graduation:</label>
+                        <input type="date" name="HSCGraduationYear" id="GraduationYear" max="2025-06-05" required><br><br>
+                        <label for="HSCSpecilization">Specialization</label>
+                        <input type="radio" name="HSCSpecilization" id="HSCSpecilization">PCM
+                        <input type="radio" name="HSCSpecilization" id="HSCSpecilization">PCB
+                        <input type="radio" name="HSCSpecilization" id="HSCSpecilization">Commerce<br><br>
+                        <label for="HSCTranscript">Transcript:</label>
+                        <input type="file" name="HSCTranscript" id="HSCTranscript" required>
+              </details><br>
+              <details>
+                <summary>UG</summary><br>
+                       <label for="CollegeName">Name of Institute:</label>
+                       <input type="text" name="CollegeName" id="CollegeName" required><br><br>
+                       <label for="CGPA">CGPA/GPA:</label>
+                       <input type="text" name="CGPA" id="CGPA" required><br><br>
+                        <label for="UgGraduationYear">Year Of Graduation:</label>
+                        <input type="date" name="UgGraduationYear" id="UgGraduationYear" max="2025-06-05" required><br><br>
+                        <label for="UGSpecilization">Specialization</label>
+                        <input type="text" name="UGSpecilization" id="UGSpecilization" required><br><br>
+                        <label for="UGTranscript">Transcript:</label>
+                        <input type="file" name="UGTranscript" id="UGTranscript[]" required multiple accept=".pdf,.doc,.docx,.txt"><br><br>
+              </details><br><hr>
+         
+
+
+
+            <h2>Resume / CV</h2>
+            <label for="resume">Upload your resume:</label>
+            <input type="file" id="resume" name="resume" required><br><br>
+
+            <label for="cover-letter">Write a brief cover letter explaining why you are a good fit for this position:</label><br>
+            <textarea id="cover-letter" name="cover-letter"></textarea><br><br>
+            
+            <label for="Linkedin">Linkedin:</label>
+            <input type="url" id="Linkedin" name="Linkedin" placeholder="Enter your Linkedin profile URL"><br><br>
+            <label for="github">GitHub:</label>  
+            <input type="url" id="github" name="github" placeholder="Enter your GitHub profile URL" required><br><br>
+            <label for="portfolio">Portfolio:</label>    
+            <input type="url" id="portfolio" name="portfolio" placeholder="Enter your portfolio URL"><br><br>
+
+
+        
+            <hr>
+
+            <h2>Position(s) Applied To</h2>
+            <label for="positions">Select the job title(s) you are applying to:</label><br>
+            <br><select name="positions" id="positions" multiple size="3" >
+                <option value="SDE">Software Developer</option>
+                <option value="SDE">Devops Engineer</option>
+                <option value="SDE">Frontend Developer</option>
+                <option value="SDE">Backend Developer</option>
+                <option value="SDE">React Developer</option>
+                <option value="SDE">Laravel Developer</option>
+                <option value="SDE">Java Developer</option>
+                <option value="SDE">UI/UX Design</option>
+                <option value="SDE">QA/Automation</option>
+            </select><br><br>
+
+
+
+
+
+
+
+
+ 
+
+
+  <input type="submit" value="Submit Application">
+  <input type="reset" value="Reset Form"><br><br>
+
+  <button type="button" onclick="saveToLocal()">Save to localStorage</button>
+    <button type="button" onclick="saveToSession()">Save to sessionStorage</button>
+    <button type="button" onclick="loadFromStorage()">Load Saved Data</button>
+    <button type="button" onclick="clearStorage()">Clear Storage</button>
+
+
+
+        </form>
+    </div>
+</body>
+</html>
